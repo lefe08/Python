@@ -1,0 +1,242 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copia de Copia de Untitled11.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyMP2GtzH8EzG7EA5HkOXZj6",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/lefe08/Python/blob/main/Evaluaci%C3%B3n9.md\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QlYJXQomTwJV",
+        "outputId": "899fc694-9b4d-4a61-92e4-ec8cf3464f68"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 la multiplicación de: 6 * 6\n",
+            "Resultado:36\n",
+            "Respuesta correcta\n",
+            "Tuviste 1 respuesta correctas\n",
+            "2 la multiplicación de: 3 * 4\n",
+            "Resultado:12\n",
+            "Respuesta correcta\n",
+            "Tuviste 2 respuesta correctas\n",
+            "3 la multiplicación de: 4 * 6\n",
+            "Resultado:24\n",
+            "Respuesta correcta\n",
+            "Tuviste 3 respuesta correctas\n",
+            "4 la multiplicación de: 4 * 7\n",
+            "Resultado:28\n",
+            "Respuesta correcta\n",
+            "Tuviste 4 respuesta correctas\n",
+            "5 la multiplicación de: 3 * 10\n",
+            "Resultado:30\n",
+            "Respuesta correcta\n",
+            "Tuviste 5 respuesta correctas\n",
+            "6 la multiplicación de: 10 * 10\n",
+            "Resultado:100\n",
+            "Respuesta correcta\n",
+            "Tuviste 6 respuesta correctas\n",
+            "7 la multiplicación de: 2 * 7\n",
+            "Resultado:14\n",
+            "Respuesta correcta\n",
+            "Tuviste 7 respuesta correctas\n",
+            "8 la multiplicación de: 1 * 5\n",
+            "Resultado:5\n",
+            "Respuesta correcta\n",
+            "Tuviste 8 respuesta correctas\n",
+            "9 la multiplicación de: 10 * 8\n",
+            "Resultado:80\n",
+            "Respuesta correcta\n",
+            "Tuviste 9 respuesta correctas\n",
+            "10 la multiplicación de: 2 * 8\n",
+            "Resultado:16\n",
+            "Respuesta correcta\n",
+            "Tuviste 10 respuesta correctas\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Práctica 9. Programación funcional.\n",
+        "#Ejercicio 1 \n",
+        "#Realice un programa que pregunte aleatoriamente una multiplicación. El programa debe indicar si la respuesta ha sido correcta o no (en caso que la respuesta sea incorrecta el programa debe indicar cuál es la correcta). El programa preguntará 10 multiplicaciones, y al finalizar mostrará el número de aciertos.\n",
+        "\n",
+        "#Análizar\n",
+        "#Hacemos un bucle con 10 iteraciones, en cada iteración se inicializan dos números con un valor aleatorio (de 2 a 10). Se calcula la multiplicación.\n",
+        "#Mostramos la multiplicación, y pedimos por teclado el resultado. Si coincide con la multiplicación calculada cuento un acierto, sino escribimos un mensaje de error mostrando el resultado correcto. Cuando salimos del bucle mostramos el número de aciertos.\n",
+        "\n",
+        "#Ejemplo. imprime una multiplicacion (9 * 8 = )por teclado se ingresa la respuesta, eso pasa 10 veces y al final nos imprime cuantas respuestas fueron correctas\n",
+        " \n",
+        "import  random # importamos random\n",
+        "\n",
+        "def   mult():# creamos funcion \n",
+        "      c = 1 # creamos variable contador \n",
+        "      a = 0 # creamos variable acietas \n",
+        "      c2 = 0 # creamos variable contador2 \n",
+        "      while  c <= 10:   #crear bucle con 10 interaciónes \n",
+        "            n1 = random.randint(1,10) #variable de num1_num2\n",
+        "            n2 = random.randint(2,10)\n",
+        "            r = n1 * n2  #operación        \n",
+        "            print(f'{c} la multiplicación de: {n1} * {n2}')\n",
+        "            a = int (input('Resultado:'))\n",
+        "            if(a == r):\n",
+        "             print('Respuesta correcta')\n",
+        "             c2+= 1\n",
+        "            else: \n",
+        "                 print(f'La respuesta correcta es{r}')\n",
+        "            c += 1 \n",
+        "            print(f'Tuviste {c2} respuesta correctas')\n",
+        "\n",
+        "\n",
+        "mult()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Ejercicio2\n",
+        "#Obtener el cuadrado de todos los elementos en la lista.\n",
+        "#Lista: [1,2,3,4,5,6,7,8,9,10]\n",
+        "#Creamos lista\n",
+        "\n",
+        "lista = []\n",
+        "#crear un rango\n",
+        "for numero  in  range(0,11):\n",
+        "    lista.append(numero**2) #agregar_a_la_lista_la_operación_cuadrada\n",
+        "print(lista)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iF8A-P_nwopC",
+        "outputId": "fbec138a-18c3-4a74-8d22-bf22cea6641a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Ejercicio 3 \n",
+        "#Obtener la cantidad de elementos mayores a 5 en la tupla.\n",
+        "#tupla = (5,2,6,7,8,10,77,55,2,1,30,4,2,3)\n",
+        "\n",
+        "def mayor(numero):\n",
+        "  if  numero>= 5:\n",
+        "     return True\n",
+        "\n",
+        "numeros  = [5, 2, 6, 7, 8, 10, 77, 55, 2, 1, 30, 4, 2, 3]\n",
+        "filter(mayor, numeros)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "X6aEEDRRx5Cr",
+        "outputId": "d712cc7d-d480-438b-985f-35ac1b0f1491"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<filter at 0x7f6897a557d0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def mayor(numero):\n",
+        " if  numero >= 5:\n",
+        "  return  True\n",
+        "\n",
+        "numeros = [5, 2, 6, 7, 8, 10, 77, 55, 1, 30, 4, 2, 3]\n",
+        "list(filter(mayor,numeros))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9Jnun6hq0TL0",
+        "outputId": "2a953fc7-cd78-4ba1-89d5-48e2715b5735"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[5, 6, 7, 8, 10, 77, 55, 30]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 47
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Ejercicio 4\n",
+        "#obtener_la_suma_de_todos_los_elementos_en_la_lista\n",
+        "#lista = [1, 2, 3, 4]\n",
+        "\n",
+        "def add(x, y):\n",
+        "      return  x + y\n",
+        "\n",
+        "      lista= [1, 2, 3, 4]\n",
+        "      print(reduce (add,lista))"
+      ],
+      "metadata": {
+        "id": "nncIMvbh3RLU"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
